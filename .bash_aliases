@@ -49,6 +49,9 @@ alias ls='ls --color=auto'
 alias la='ls -A'
 alias grep='grep --color=auto'
 alias clci='curl -s https://raw.githubusercontent.com/pauloRSF/clc/master/clc | sudo tee /usr/local/bin/clc > /dev/null && sudo chmod +x /usr/local/bin/clc'
+genpass () {
+  cat /dev/urandom | strings | tr -dc 'A-Za-z0-9!@#$%&*' | head -c $1 && echo
+}
 
 cd () {
   builtin cd "$@"
