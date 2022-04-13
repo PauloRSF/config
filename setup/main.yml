@@ -1,0 +1,12 @@
+---
+- name: My workstation setup
+  hosts: localhost
+  tasks:
+    - name: Install packages
+      become: yes
+      apt:
+        pkg:
+        - curl
+        - git
+    - include: asdf.yml
+

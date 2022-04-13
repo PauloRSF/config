@@ -1,0 +1,11 @@
+- name: Download ASDF
+  git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: ~/.asdf
+    version: v0.9.0
+- name: Add ASDF to shell config file
+  shell:
+    cmd: |
+      echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+      echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
