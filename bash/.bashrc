@@ -3,8 +3,11 @@ case $- in
       *) return;;
 esac
 
-source-if-exists ~/.config/bash/aliases.sh
-source-if-exists ~/.config/bash/tools.sh
+function source-if-exists {
+  if [ -f $1 ]; then . $1; fi
+}
+
+export PATH="$PATH:$HOME/.local/bin/custom"
 
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
@@ -38,4 +41,7 @@ unset color_prompt force_color_prompt
 if ! shopt -oq posix; then
     source-if-exists /usr/share/bash-completion/bash_completion
 fi
+
+source-if-exists $HOME/.config/bash/aliases.sh
+source-if-exists $HOME/.config/bash/tools.sh
 

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# containerize: use docker containers to run tools withou needing to install them manually 
+
+if [ ! -z $(which $1) ]; then
+    1>&2 echo "containerize: there's already a file called '$1' in your PATH"
+    return 1
+fi
+
+sudo docker pull $3
+
+if [ $? -eq 0 ]; then
+    TOOL_PATH="$HOME/.local/bin/$1"
+    echo -e '#!/bin/bash\n' > $TOOL_PATH
+    echo -e "sudo docker run $4 -it --net=host -v \$(pwd):/workdir -w /workdir --rm $3 $2 \$@\n" >> $TOOL_PATH
+    sudo chmod +x $TOOL_PATH
+else
+    1>&2 echo 'containerize: aborting containerization...'
+fi
+

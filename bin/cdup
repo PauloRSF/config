@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# cdup: go up N dirs
+
+case $1 in
+    ''|*[!0-9]*) echo 'up: argument needs to be an integer'; return 1 ;;
+    *) cd $(for i in $(seq $1); do printf '../'; done) ;; # MY EYES
+esac
+

@@ -3,7 +3,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias rgrep='rgrep --color=auto'
 
-# Replace peasant default coreutils with masterrace rusty goods
+# Replace peasant default coreutils with masterrace tools
 alias cp='rsync -avh --progress'
 alias cat='batcat'
 
