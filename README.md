@@ -1,2 +1,4 @@
-# PauloRSF's dotfiles
-Repository for my personal dotfiles
+# PauloRSF's config files
+
+Files to config & setup my stuff
+
