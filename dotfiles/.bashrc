@@ -42,6 +42,6 @@ if ! shopt -oq posix; then
     source-if-exists /usr/share/bash-completion/bash_completion
 fi
 
-source-if-exists $HOME/.config/bash/aliases.sh
-source-if-exists $HOME/.config/bash/tools.sh
+source-if-exists $HOME/.config/bash/aliases
+source-if-exists $HOME/.config/bash/tools
 
