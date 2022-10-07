@@ -1,14 +1,17 @@
 {
-	"coc.preferences.semanticTokensHighlights": false,
-	"rust-analyzer.server.path": "rust-analyzer",
-	"rust-analyzer.updates.channel": "nightly",
-	"rust-analyzer.procMacro.enable": true,
-	"rust-analyzer.checkOnSave.command": "clippy",
-	"diagnostic.checkCurrentLine": true,
-	"diagnostic.refreshOnInsertMode": true,
-	"diagnostic.errorSign": "●",
-	"diagnostic.warningSign": "●",
-	"diagnostic.infoSign": "●",
-	"diagnostic.hintSign": "●"
+  "coc.preferences.jumpCommand": "drop",
+  "coc.preferences.semanticTokensHighlights": false,
+  "rust-analyzer.inlayHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.updates.channel": "nightly",
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.errorSign": "●",
+  "diagnostic.warningSign": "●",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "●"
 }
 
