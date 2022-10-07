@@ -11,3 +11,6 @@ source "$HOME/.cargo/env"
 # Chromium
 export CHROME_BIN=$(which chromium)
 
+# Git
+export GIT_EDITOR=vim
+
